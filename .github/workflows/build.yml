@@ -50,3 +50,26 @@ jobs:
             --title "Maps ${{ steps.source.outputs.edition }}" \
             --notes "OpenStreetMap data from the Protomaps build of ${{ steps.source.outputs.edition }}. © OpenStreetMap contributors, ODbL." \
             --latest
+
+      - name: Keep only the two newest editions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # De vorige editie blijft een maand staan: een download die liep toen
+          # de nieuwe verscheen, kan dan nog afmaken.
+          gh release list --limit 100 --json tagName,createdAt \
+            --jq 'sort_by(.createdAt) | reverse | .[2:] | .[].tagName' |
+          while read -r tag; do
+            gh release delete "$tag" --yes --cleanup-tag
+          done
+
+      - name: Record the edition
+        run: |
+          # Een commit per editie houdt de repo actief: GitHub zet geplande
+          # workflows uit na 60 dagen zonder activiteit.
+          cp dist/catalog.json latest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add latest.json
+          git commit -m "Edition ${{ steps.source.outputs.edition }}" || exit 0
+          git push

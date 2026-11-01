@@ -11,7 +11,8 @@ The workflow **Build maps** runs on the first of every month (or by hand under
 Actions). It takes the latest world build from
 [Protomaps](https://docs.protomaps.com/basemaps/downloads), cuts out every
 region in `regions.json` up to zoom 14 and publishes the files with a fresh
-`catalog.json`.
+`catalog.json`. Only the two newest editions are kept, and `latest.json` in
+this repo records the current one.
 
 To add a country: put its border in `regions/` as GeoJSON and add a line to
 `regions.json`.
