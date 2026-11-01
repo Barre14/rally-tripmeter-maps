@@ -1,8 +1,19 @@
 [
-  {
-    "id": "be",
-    "name": "Belgium",
-    "region": "regions/belgium.geojson",
-    "maxzoom": 14
-  }
+  {"id": "be", "name": "Belgium", "region": "regions/belgium.geojson", "maxzoom": 14},
+  {"id": "nl", "name": "Netherlands", "region": "regions/netherlands.geojson", "maxzoom": 14},
+  {"id": "lu", "name": "Luxembourg", "region": "regions/luxembourg.geojson", "maxzoom": 14},
+  {"id": "fr-nw", "name": "France North-West", "region": "regions/france.geojson", "clip": [-6, 46.6, 2.5, 52], "maxzoom": 14},
+  {"id": "fr-ne", "name": "France North-East", "region": "regions/france.geojson", "clip": [2.5, 46.6, 9, 52], "maxzoom": 14},
+  {"id": "fr-sw", "name": "France South-West", "region": "regions/france.geojson", "clip": [-6, 41, 2.5, 46.6], "maxzoom": 14},
+  {"id": "fr-se", "name": "France South-East", "region": "regions/france.geojson", "clip": [2.5, 41, 10, 46.6], "maxzoom": 14},
+  {"id": "de-n", "name": "Germany North", "region": "regions/germany.geojson", "clip": [5, 51, 16, 56], "maxzoom": 14},
+  {"id": "de-s", "name": "Germany South", "region": "regions/germany.geojson", "clip": [5, 47, 16, 51], "maxzoom": 14},
+  {"id": "ch", "name": "Switzerland", "region": "regions/switzerland.geojson", "maxzoom": 14},
+  {"id": "at", "name": "Austria", "region": "regions/austria.geojson", "maxzoom": 14},
+  {"id": "it", "name": "Italy", "region": "regions/italy.geojson", "maxzoom": 14},
+  {"id": "es", "name": "Spain", "region": "regions/spain.geojson", "maxzoom": 14},
+  {"id": "pt", "name": "Portugal", "region": "regions/portugal.geojson", "maxzoom": 14},
+  {"id": "gb", "name": "United Kingdom", "region": "regions/united-kingdom.geojson", "maxzoom": 14},
+  {"id": "dk", "name": "Denmark", "region": "regions/denmark.geojson", "maxzoom": 14},
+  {"id": "cz", "name": "Czechia", "region": "regions/czechia.geojson", "maxzoom": 14}
 ]
