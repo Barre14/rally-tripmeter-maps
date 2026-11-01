@@ -1,0 +1,8 @@
+[
+  {
+    "id": "be",
+    "name": "Belgium",
+    "region": "regions/belgium.geojson",
+    "maxzoom": 14
+  }
+]
